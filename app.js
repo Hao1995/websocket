@@ -6,7 +6,7 @@ var app = require('express')(),
 app.get('/', function (req, res) {
     res.send("TEST");
 });
-
+// test
 io.on('connection', function (socket) {
     socket.emit('news', { hello: 'world' });
     socket.on('my other event', function (data) {
