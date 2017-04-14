@@ -1,16 +1,26 @@
-var app = require('express')(),
+var express = require('express'),
+    app = express(),
     http = require("http").Server(app),
     io = require('socket.io')(http),
     port = process.env.PORT || 3000;
 
-app.get('/', function (req, res) {
-    res.send("TEST");
+app.use(express.static(__dirname +"/public"));
+
+app.get('/client1', function (req, res) {
+    res.render("client1.ejs");
+});
+app.get('/client2', function (req, res) {
+    res.render("client2.ejs");
 });
 
 io.on('connection', function (socket) {
-    socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
-        console.log(data);
+    // var i = 1;
+    socket.emit('news', { hello:"test"});
+    socket.on('change', function (data) {
+        //bordcast to everyone
+        //傳遞的資料永遠會在data底下
+        io.sockets.emit("client2Change",{imgIdx:data.imgIdx});
+        console.log("imgIdx : "+data.imgIdx);
     });
 });
 
