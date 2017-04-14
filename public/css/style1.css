@@ -1,0 +1,11 @@
+img{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.btn{
+    position: relative;
+    padding-top: 10%;
+    padding-left: 50%;
+}

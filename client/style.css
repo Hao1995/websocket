@@ -1,0 +1,16 @@
+body{
+    background: green;
+}
+.container{
+}
+img{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+div a{
+    position: relative;
+    text-align: center;
+}
