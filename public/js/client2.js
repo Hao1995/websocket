@@ -1,4 +1,5 @@
-var socket = io.connect('http://localhost:3000');
+// var socket = io.connect('http://localhost:3000');
+var socket = io.connect('https://safe-eyrie-36173.herokuapp.com');
 var btn = document.querySelector("#btn1");
 var img = document.getElementById("photo1");
 var imgDB = ["https://farm1.staticflickr.com/112/316612921_f23683ca9d.jpg",
