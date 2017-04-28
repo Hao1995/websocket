@@ -20,7 +20,9 @@ var imgDB_3 =
 var imgDB_4 =
     ["/image/4-1-2.jpg"];
 
-btnSetting();
+setTimeout(function(){
+    btnSetting();
+},500);
 
 function btnSetting(){
     // btn_010202 Setting
