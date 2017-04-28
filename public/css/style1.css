@@ -4,12 +4,16 @@ img{
     top: 0;
     left: 0;
 }
-#btnGroup{
+
+.color{
     border: 1px solid red;
+}
+#btnGroup{
+    /*border: 1px solid red;*/
     position: absolute;
 }
 #btnGroup .btn{
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
     display: block;
     height: 22.8%;
     width: 100%;
@@ -18,21 +22,21 @@ img{
 #btn_010301 {
     position: absolute;
     background: none;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     border-radius: 30%;
     display: none;
 }
 #btn_010401 {
     position: absolute;
     background: none;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     border-radius: 30%;
     display: none;
 }
 #btn_030101 {
     position: absolute;
     background: none;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     border-radius: 50%;
     display: none;
 }
