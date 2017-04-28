@@ -24,7 +24,7 @@ var imgDB_4 =
 
 setTimeout(function(){
     btnSetting();
-},500);
+},100);
 
 function btnSetting(){
     //Home Page Btn Setting
