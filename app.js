@@ -12,15 +12,23 @@ app.get('/client1', function (req, res) {
 app.get('/client2', function (req, res) {
     res.render("client2.ejs");
 });
-// test
+
 io.on('connection', function (socket) {
-    // var i = 1;
     socket.emit('news', { hello:"test"});
-    socket.on('change', function (data) {
+    socket.on('make2change', function (data) {
         //bordcast to everyone
         //傳遞的資料永遠會在data底下
-        io.sockets.emit("client2Change",{imgIdx:data.imgIdx});
-        console.log("imgIdx : "+data.imgIdx);
+        console.log("----------make2change------------");
+        console.log("Data.idx = " + data.idx);
+        console.log("Data.img = " + data.img_idx);
+        io.sockets.emit("client2Change",{img_idx:data.img_idx, idx:data.idx});
+        // console.log("imgIdx : "+data.imgIdx);
+    });
+    socket.on('make1change', function (data) {
+        console.log("----------make1change------------");
+        console.log("Data.idx = " + data.idx);
+        console.log("Data.img = " + data.img_idx);
+        io.sockets.emit("client1Change",{img_idx:data.img_idx, idx:data.idx});
     });
 });
 

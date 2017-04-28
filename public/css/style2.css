@@ -1,12 +1,50 @@
 img{
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    
 }
-.btn{
-    position: relative;
-    padding-top: 10%;
-    padding-left: 50%;
+
+#btn_010202{
+    position: absolute;
+    background: none;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: none;
 }
+#btn_010402{
+    position: absolute;
+    background: none;
+    border: 1px solid red;
+    border-radius: 30%;
+    display: none;
+}
+#btn_010602{
+    position: absolute;
+    background: none;
+    border: 1px solid red;
+    border-radius: 30%;
+    display: none;
+}
+#btn_020202{
+    position: absolute;
+    background: none;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: none;
+}
+#btn_020302{
+    position: absolute;
+    background: none;
+    border: 1px solid red;
+    border-radius: 30%;
+    display: none;
+}
+#btn_040102{
+    position: absolute;
+    background: none;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: inline;
+}
+
