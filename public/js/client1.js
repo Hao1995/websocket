@@ -25,6 +25,7 @@ var imgDB_4 =
 btnSetting();
 
 function btnSetting(){
+    console.log("btnSetting ...");
     //Home Page Btn Setting
     btnGroup.style.width = img.width*0.423 + "px";
     btnGroup.style.height = img.height*0.488 + "px";
