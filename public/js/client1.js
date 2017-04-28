@@ -22,18 +22,15 @@ var imgDB_3 =
 var imgDB_4 = 
     ["/image/4-1-1.jpg"];
 
-btnSetting();
+setTimeout(function(){
+    btnSetting();
+},1000);
 
 function btnSetting(){
-    console.log("btnSetting ...");
     //Home Page Btn Setting
     btnGroup.style.width = img.width*0.423 + "px";
     btnGroup.style.height = img.height*0.488 + "px";
     btnGroup.style.top = img.height*0.372 + "px";
-    console.log("img.width = " + img.width);
-    console.log("img.height = " + img.height);
-    console.log("btnGroup.style.width = " + btnGroup.style.width);
-    console.log("btnGroup.style.height = " + btnGroup.style.height);
     for(var i = 0 ; i < btn.length ; i++){
         btn[i].style.marginBottom = img.height*0.014 + "px";
     }
