@@ -2,8 +2,10 @@ var express = require('express'),
     app = express(),
     http = require("http").Server(app),
     io = require('socket.io')(http),
+    compression = require("compression"),
     port = process.env.PORT || 3000;
 
+app.use(compression());
 app.use(express.static(__dirname +"/public"));
 
 app.get('/client1', function (req, res) {
