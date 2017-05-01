@@ -9,6 +9,7 @@ var btn_4 = document.querySelector("#btn_4");
 var btnGroup = document.getElementById("btnGroup");
 var btn = document.querySelectorAll(".btn");
 var btn_010301 = document.getElementById("btn_010301");
+var btn2_010301 = document.getElementById("btn2_010301");
 var btn_010401 = document.getElementById("btn_010401");
 var btn_030101 = document.getElementById("btn_030101");
 
@@ -40,6 +41,12 @@ function btnSetting(){
     var temp010301 = 0.125;
     btn_010301.style.width = img.width*temp010301 + "px";
     btn_010301.style.height = img.width*temp010301*0.38 + "px";
+    // btn2_010301 Setting
+    btn2_010301.style.top = img.height*0.41 + "px";
+    btn2_010301.style.left = img.width*0.482 + "px";
+    var temp2010301 = 0.125;
+    btn2_010301.style.width = img.width*temp2010301 + "px";
+    btn2_010301.style.height = img.width*temp2010301*0.38 + "px";
     // btn_010401 Setting
     btn_010401.style.top = img.height*0.405 + "px";
     btn_010401.style.left = img.width*0.482 + "px";
@@ -75,6 +82,7 @@ socket.on("client1Change", function (data) {
                 },delayTime);
             }else if(idx == 2){
                 btn_010301.style.display = "block";
+                btn2_010301.style.display = "block";
             }
             break;
         case 2:
@@ -142,6 +150,17 @@ btn_010301.addEventListener("click",function(){
     btnMenu(img_idx,idx);
     btn_010401.style.display = "block";
 });
+btn2_010301.addEventListener("click",function(){
+    var idx = 4;
+    var img_idx =1;
+
+    img.src = imgDB_1[idx];
+    disappear();
+    btnMenu(img_idx,idx);
+    setTimeout(function(){
+        img.src = imgDB_1[idx+1];
+    },delayTime);
+});
 btn_010401.addEventListener("click",function(){
     var idx = 4;
     var img_idx =1;
@@ -170,6 +189,7 @@ function btnMenu(img_idx,idx){
 }
 function disappear(){
     btn_010301.style.display = "none";
+    btn2_010301.style.display = "none";
     btn_010401.style.display = "none";
     btn_030101.style.display = "none";
 }
